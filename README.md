@@ -271,6 +271,6 @@ Through projects like this data warehouse — covering ETL pipeline design, meda
 
 I'm actively seeking opportunities to grow as a **Data Analyst** and contribute to data-driven organisations.
 
-📫 Connect with me on [LinkedIn](https://www.linkedin.com/in/your-profile) <!-- update this link -->
+📫 Connect with me on [[LinkedIn](http://www.linkedin.com/in/somadharabudumuru)] <!-- update this link -->
 
     
