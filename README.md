@@ -63,8 +63,8 @@ banking-financial-analytics/
 │
 ├── 📁 power_bi/
 │   └── dax_measures.md                      — All DAX measures with explanations
-│
-└── README.md
+
+
 ```
 
 ---
@@ -145,7 +145,6 @@ This project implements the **Medallion Architecture** across three layers:
 ### Prerequisites
 - Microsoft SQL Server (any edition including Express)
 - SQL Server Management Studio (SSMS)
-- CSV source files placed in `C:\BankingDW\RawData\`
 
 ### Execution Order
 
@@ -159,22 +158,7 @@ Step 4 → 04_build_gold_star_schema.sql        Build star schema dimensions and
 Step 5 → 05_create_powerbi_views.sql          Create summary views for validation
 Step 6 → 06_simple_analysis_queries.sql       Run ad-hoc analysis queries
 ```
-
-> 💡 If `BULK INSERT` fails, see [`documentation/bulk_insert_troubleshooting.md`](documentation/bulk_insert_troubleshooting.md)
-
 ---
-
-## 🔍 Data Quality Issues Resolved
-
-| # | Issue | Fix Applied |
-|---|---|---|
-| 1 | INR amounts contain commas — e.g. `7,06,162.87` | `REPLACE(col, ',', '')` before `TRY_CONVERT` |
-| 2 | Non-standard date format — `04-Jan-2024` | `TRY_CONVERT(DATE, col, 106)` |
-| 3 | Blank or null vendor / category names | `COALESCE(NULLIF(col, ''), 'Unknown')` |
-| 4 | Bank debits stored as negative numbers | `ABS()` applied; split into income and expense columns |
-| 5 | Leading / trailing whitespace in text fields | `LTRIM(RTRIM(col))` on all text columns |
-| 6 | Source CSV filename contains a typo | Script references the misspelled filename exactly |
-| 7 | Recursive CTE exceeds SQL Server default 100-level limit | `OPTION (MAXRECURSION 1000)` on DimDate insert |
 
 ---
 
@@ -247,27 +231,20 @@ Latest Running Balance = CALCULATE(
 
 | File | Contents |
 |---|---|
-| [`project_runbook.md`](documentation/project_runbook.md) | Full step-by-step execution guide |
 | [`data_dictionary.md`](documentation/data_dictionary.md) | Column definitions for all Bronze, Silver, and Gold tables |
 | [`test_cases.md`](documentation/test_cases.md) | 7 test cases covering row counts, data quality, and Power BI output |
-| [`bulk_insert_troubleshooting.md`](documentation/bulk_insert_troubleshooting.md) | Fixes for the most common BULK INSERT errors |
 | [`dax_measures.md`](power_bi/dax_measures.md) | All DAX measures with explanations |
 
 ---
-
-## 📜 License
-
-This project is licensed under the [MIT License](LICENSE).  
-You are free to use, modify, and share this project with proper attribution.
 
 ---
 
 ## 🌟 About Me
 
 Hi there! I'm **Somadhara Budumuru** with hands-on experience in **SQL Server, Power BI, and data analysis**.  
-I enjoy transforming raw financial data into meaningful insights and building interactive dashboards that support data-driven decision-making.
+I enjoy transforming raw  data into meaningful insights and building interactive dashboards that support data-driven decision-making.
 
-Through projects like this data warehouse — covering ETL pipeline design, medallion architecture, star schema modelling, and Power BI reporting — I'm continuously strengthening my skills in data engineering and business intelligence.
+Through projects like this data warehouse — covering ETL pipeline design, medallion architecture, star schema modelling, and Power BI reporting — I'm continuously strengthening my skills in data analytics and business intelligence.
 
 I'm actively seeking opportunities to grow as a **Data Analyst** and contribute to data-driven organisations.
 
