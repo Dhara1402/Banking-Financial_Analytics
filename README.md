@@ -6,7 +6,7 @@
 ![Architecture](https://img.shields.io/badge/Architecture-Medallion-blue?style=for-the-badge)
 
 Welcome to the **Banking Financial Analytics** repository! 🚀  
-This project demonstrates a complete **personal finance data warehouse** built with SQL Server and Power BI — covering FY 2024–2025 bank transactions and credit card statements. Designed as a portfolio project, it highlights industry best practices in **data engineering, data modelling, and business intelligence reporting**.
+This project demonstrates a complete **finance data warehouse** built with SQL Server and Power BI — covering FY 2024–2025 bank transactions and credit card statements. This is a freelance project, it highlights industry best practices in **data engineering, data modelling, and business intelligence reporting**.
 
 ---
 
@@ -58,8 +58,7 @@ banking-financial-analytics/
 ├── 📁 documentation/
 │   ├── data_dictionary.md                   — Column definitions for all layers
 │   ├── test_cases.md                        — 7 test cases covering all layers
-│   └── bulk_insert_troubleshooting.md       — Fixes for common BULK INSERT errors
-│
+│ 
 ├── 📁 power_bi/
 │   └── dax_measures.md                      — All DAX measures with explanations
 
