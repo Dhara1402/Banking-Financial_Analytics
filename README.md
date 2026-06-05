@@ -56,7 +56,6 @@ banking-financial-analytics/
 │   └── 06_simple_analysis_queries.sql       — Ad-hoc SQL analysis queries
 │
 ├── 📁 documentation/
-│   ├── project_runbook.md                   — Step-by-step execution guide
 │   ├── data_dictionary.md                   — Column definitions for all layers
 │   ├── test_cases.md                        — 7 test cases covering all layers
 │   └── bulk_insert_troubleshooting.md       — Fixes for common BULK INSERT errors
@@ -147,8 +146,6 @@ This project implements the **Medallion Architecture** across three layers:
 - SQL Server Management Studio (SSMS)
 
 ### Execution Order
-
-Run the scripts inside `/sql_scripts/` **in this exact order** from SSMS:
 
 ```
 Step 1 → 01_create_database_and_tables.sql   Create BankingFinancialDW database and all tables
